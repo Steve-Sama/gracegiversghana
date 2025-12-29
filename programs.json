@@ -1,0 +1,63 @@
+[
+  {
+    "title": "Community Support & Relief",
+    "icon": "fa-hand-holding-heart",
+    "description": "Providing immediate and long-term support to vulnerable communities through essential services and relief initiatives.",
+    "focus": [
+      "Food and basic necessities",
+      "Health access support",
+      "Emergency relief response"
+    ]
+  },
+  {
+    "title": "Youth Leadership & Mentorship",
+    "icon": "fa-people-group",
+    "description": "Empowering young people with leadership skills, mentorship, and opportunities for personal and community development.",
+    "focus": [
+      "Leadership training",
+      "Mentorship programs",
+      "Community service projects"
+    ]
+  },
+  {
+    "title": "Skills Development & Innovation",
+    "icon": "fa-lightbulb",
+    "description": "Equipping individuals with practical skills and innovative tools to create sustainable livelihoods.",
+    "focus": [
+      "Entrepreneurship training",
+      "Digital and vocational skills",
+      "Innovation workshops"
+    ]
+  },
+  {
+    "title": "Volunteer & Community Engagement",
+    "icon": "fa-handshake-angle",
+    "description": "Building strong community networks through volunteerism and local participation.",
+    "focus": [
+      "Volunteer training",
+      "Community outreach",
+      "Local partnerships"
+    ]
+  },
+  {
+  "title": "Health Access & Wellness Outreach",
+  "icon": "fa-notes-medical",
+  "description": "Improving access to basic healthcare services through outreach programs, health education, and community wellness initiatives.",
+  "focus": [
+    "Health screenings and referrals",
+    "Community health education",
+    "Preventive care awareness"
+  ]
+},
+ {
+  "title": "Education Support & Learning Development",
+  "icon": "fa-graduation-cap",
+  "description": "Supporting learners through educational resources, mentorship, and programs that promote lifelong learning and academic success.",
+  "focus": [
+    "Learning materials support",
+    "Academic mentorship",
+    "School and community learning programs"
+  ]
+}
+
+]
