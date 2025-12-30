@@ -3,6 +3,7 @@ fetch('news.json')
   .then(res => res.json())
   .then(data => {
     const newsGrid = document.getElementById('news-grid');
+    // Sort by newest first
     data.sort((a,b) => new Date(b.date) - new Date(a.date));
 
     data.forEach(news => {
@@ -52,21 +53,35 @@ fetch('news.json')
         contentDiv.innerHTML = '';
       };
 
-      // ONE unified interaction handler
-      div.addEventListener('click', (e) => {
-        e.stopPropagation();
+      // Unified interaction for both mobile & desktop
+      let isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-        if (div.classList.contains('expanded')) {
-          collapseCard();
-        } else {
-          expandCard();
-        }
-      });
+      if (isTouchDevice) {
+        // Mobile: single tap
+        div.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (div.classList.contains('expanded')) {
+            collapseCard();
+          } else {
+            expandCard();
+          }
+        });
+      } else {
+        // Desktop: hover triggers expansion
+        div.addEventListener('mouseenter', expandCard);
+        div.addEventListener('mouseleave', collapseCard);
+        // Optional click on desktop also works
+        div.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (div.classList.contains('expanded')) {
+            collapseCard();
+          } else {
+            expandCard();
+          }
+        });
+      }
 
-      // Desktop hover support (optional but safe)
-      div.addEventListener('mouseenter', expandCard);
-      div.addEventListener('mouseleave', collapseCard);
-
-      newsGrid.appendChild(div);
+      // Prepend to show newest first
+      newsGrid.prepend(div);
     });
   });
