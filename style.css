@@ -1019,35 +1019,30 @@ body.news-page .section-title {
 }
 
 /* NEWS GRID */
-body.news-page .news-grid {
+.news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 25px;
-}
-
-/* ================= NEWS CARD EXPANDABLE ================= */
-body.news-page .news-grid {
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
-  justify-content: center;
+  justify-items: center; /* center each card in its column */
+  align-items: start;
 }
 
-/* UNO-style news cards */
+/* NEWS CARD */
 .news-card {
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
-  width: 260px;  /* narrow */
-  height: 380px; /* taller */
+  width: 260px;       /* base width */
+  max-height: 380px;  /* base height */
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: max-height 0.5s ease, box-shadow 0.3s ease;
   position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* NEWS TOP */
 .news-top {
   display: flex;
   gap: 10px;
@@ -1059,8 +1054,6 @@ body.news-page .news-grid {
   width: 90px;
   height: 90px;
   object-fit: cover;
-  margin: 0;
-  border-radius: 0;
 }
 
 .news-header {
@@ -1087,20 +1080,15 @@ body.news-page .news-grid {
   line-height: 1.4;
 }
 
-/* Expanded Card */
-.news-card.expanded {
-  width: 700px;
-  height: auto;
-  flex-direction: column;
-  z-index: 10;
+/* COLLAPSIBLE CONTENT */
+.news-content {
+  max-height: 0;              /* collapsed by default */
+  overflow: hidden;
+  padding: 0 10px;
+  transition: max-height 0.5s ease, padding 0.5s ease;
 }
 
-.news-card.expanded .news-content {
-  display: block;
-  padding: 15px;
-}
-
-/* Word fade-in */
+/* WORD FADE-IN */
 .word {
   opacity: 0;
   display: inline-block;
@@ -1109,6 +1097,17 @@ body.news-page .news-grid {
 
 @keyframes fadeInWord {
   to { opacity: 1; }
+}
+
+/* EXPANDED CARD */
+.news-card.expanded {
+  max-height: 1000px;   /* enough to show full content */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.news-card.expanded .news-content {
+  padding: 10px;
+  max-height: 1000px; /* show full content */
 }
 
 
@@ -1207,3 +1206,4 @@ body.news-page .footer-bottom { text-align: center; font-size: 13px; padding-top
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
