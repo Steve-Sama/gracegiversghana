@@ -59,6 +59,60 @@ body {
   }
 }
 
+/* ================= GALLERY GRID ================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= IMAGE VIEWER ================= */
+
+#image-viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: auto;
+  padding: 30px;
+}
+
+#image-viewer img {
+  max-width: none;      /* allows actual image size */
+  max-height: none;
+  width: auto;
+  height: auto;
+}
+
+/* Close button */
+.close-viewer {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+}
+
 /* ===============================
    FOOTER
 ================================ */
@@ -212,6 +266,7 @@ body {
     height: 180px;
   }
 }
+
 
 
 
