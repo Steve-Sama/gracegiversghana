@@ -36,14 +36,25 @@ body {
 .logo-img { height: 30px; }
 
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
+  display: flex;           /* horizontal layout */
+  flex-direction: row;     /* ensure row */
+  justify-content: flex-end; /* push links to right; use center if you prefer */
+  align-items: center;     /* vertical alignment */
+  gap: 25px;               /* space between links */
+  list-style: none;        /* remove bullets */
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
+.nav-links li {
+  display: inline-block;   /* safe for older browsers */
+}
+
+.nav-links li a {
   color: #fff;
   text-decoration: none;
+  white-space: nowrap;     /* prevent wrapping */
+  font-weight: 500;
 }
 
 /* MOBILE */
@@ -266,6 +277,7 @@ body {
     height: 180px;
   }
 }
+
 
 
 
