@@ -23,36 +23,27 @@ body {
    NAVBAR
 ================================ */
 .site-header {
-  background: #2e7d32;
-  width: 100%;
+  background-color: #2e7d32;
 }
 
 .header-content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 60px;                 /* HARD LIMIT */
+  align-items: center;
+  padding: 15px 0;
 }
 
-.logo-img {
-  height: 34px;
-}
+.logo-img { height: 30px; }
 
-.main-nav ul {
-  list-style: none;
+.nav-links {
   display: flex;
-  gap: 22px;
+  list-style: none;
+  gap: 20px;
 }
 
-.main-nav a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.main-nav a:hover {
-  opacity: 0.8;
 }
 
 /* MOBILE */
@@ -221,6 +212,7 @@ body {
     height: 180px;
   }
 }
+
 
 
 
