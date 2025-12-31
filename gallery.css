@@ -65,8 +65,8 @@ body {
     padding: 10px 0;
   }
 
-  .main-nav ul {
-    gap: 14px;
+  .nav-links {
+    gap: 15px;
   }
 }
 
@@ -277,6 +277,7 @@ body {
     height: 180px;
   }
 }
+
 
 
 
