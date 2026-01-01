@@ -673,6 +673,117 @@ body {
   background-color: #f8fafc;
 }
 
+/* ==============================
+   Founder Biography Section
+   ============================== */
+
+.founder-bio-section {
+  padding: 60px 20px;
+  background: #f9fafb;
+}
+
+.founder-bio-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.founder-bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  word-spacing: 2px; /* 👈 ADD THIS */
+}
+
+
+/* Founder Image */
+.founder-image {
+  flex: 1;
+  text-align: center;
+}
+
+.founder-image img {
+  width: 260px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Founder Text */
+.founder-text {
+  flex: 2;
+}
+
+.founder-name {
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+/* Decorative underline */
+.founder-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #1e88e5, #42a5f5);
+  border-radius: 4px;
+}
+
+.founder-role {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Bio Text */
+.founder-bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Fade-in animation setup */
+.fade-text span {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeWord 0.6s ease forwards;
+  margin-right: 6px; /* 👈 THIS FIXES THE SPACING */
+}
+
+
+@keyframes fadeWord {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .founder-bio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-name::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 /* WHO WE SERVE / PROBLEM / MISSION / VISION */
 .problem-list,
 .approach-steps {
@@ -1206,4 +1317,5 @@ body.news-page .footer-bottom { text-align: center; font-size: 13px; padding-top
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 
