@@ -23,38 +23,41 @@ body {
    NAVBAR
 ================================ */
 .site-header {
-  background-color: #2e7d32;
+  background: #2e7d32;
+  width: 100%;
 }
 
 .header-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  justify-content: space-between;
+  height: 60px;              /* HARD LIMIT */
 }
 
-.logo-img { height: 30px; }
+/* LOGO */
+.logo-img {
+  height: 34px;
+}
 
+/* NAV LINKS */
 .nav-links {
-  display: flex;           /* horizontal layout */
-  flex-direction: row;     /* ensure row */
-  justify-content: flex-end; /* push links to right; use center if you prefer */
-  align-items: center;     /* vertical alignment */
-  gap: 25px;               /* space between links */
-  list-style: none;        /* remove bullets */
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;
   margin: 0;
   padding: 0;
 }
 
-.nav-links li {
-  display: inline-block;   /* safe for older browsers */
-}
-
-.nav-links li a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
-  white-space: nowrap;     /* prevent wrapping */
+  font-size: 14px;
   font-weight: 500;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
 }
 
 /* MOBILE */
@@ -66,7 +69,7 @@ body {
   }
 
   .nav-links {
-    gap: 15px;
+    gap: 14px;
   }
 }
 
@@ -333,6 +336,7 @@ body {
     height: 180px;
   }
 }
+
 
 
 
