@@ -210,11 +210,10 @@ body {
   color: #ffffff;
   text-align: center;
   margin-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 26px;
   letter-spacing: 1px;
 }
-
 /* GRID */
 .gallery-grid {
   display: grid;
@@ -334,6 +333,7 @@ body {
     height: 180px;
   }
 }
+
 
 
 
