@@ -25,3 +25,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-grid > *");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    galleryItems.forEach(item => {
+      if (filter === "all" || item.dataset.type === filter) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
