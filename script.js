@@ -132,6 +132,24 @@ heroSlider.addEventListener("touchend", (e) => {
     } else {
       showHeroSlide(heroIndex - 1, "prev");
     }
+
+    /*ABOUT- TEXT FADE IN FOR BIO*/
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.querySelector(".fade-text");
+
+  if (!textElement) return; // safety check
+
+  const words = textElement.textContent.trim().split(/\s+/);
+  textElement.textContent = "";
+
+  words.forEach((word, index) => {
+    const span = document.createElement("span");
+    span.textContent = word + " ";
+    span.style.animationDelay = `${index * 0.06}s`;
+    textElement.appendChild(span);
+  });
+});
     resetHeroAutoSlide();
   }
 });
+
