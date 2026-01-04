@@ -751,6 +751,25 @@ body {
   color: #333;
 }
 
+/*FOUNDER HIGHLIGHTS*/
+.founder-highlights-title {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  color: #1e88e5;
+}
+
+.founder-highlights {
+  margin-top: 10px;
+  padding-left: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.founder-highlights li {
+  margin-bottom: 6px;
+}
+
+
 /* Fade-in animation setup */
 .fade-text span {
   opacity: 0;
@@ -783,6 +802,7 @@ body {
     transform: translateX(-50%);
   }
 }
+
 
 /* WHO WE SERVE / PROBLEM / MISSION / VISION */
 .problem-list,
@@ -1317,5 +1337,6 @@ body.news-page .footer-bottom { text-align: center; font-size: 13px; padding-top
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 
 
